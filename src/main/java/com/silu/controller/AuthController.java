@@ -89,8 +89,7 @@ public class AuthController {
         String role = authorities.isEmpty() ? null : authorities.iterator().next().getAuthority();
         AuthResponse authResponse = AuthResponse.builder()
                 .jwt(jwt)
-                .message("Login" +
-                        " Success")
+                .message("Login" + " Success")
                 .role(USER_ROLE.valueOf(role))
                 .build();
 
